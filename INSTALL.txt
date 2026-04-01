@@ -1,0 +1,66 @@
+
+INSTALLATION INSTRUCTIONS FOR SCREENFORGE
+----------------------------------------
+
+1. Prerequisites:
+   Before compiling the program, ensure you have the required dependencies installed on your system.
+   Specifically, you'll need the gcc compiler and pkg-config utility, along with the gtk+-3.0 development libraries.
+
+   On a Debian-based system, you can install the dependencies using the following command:
+
+       sudo apt-get install build-essential pkg-config libgtk-3-dev
+
+   On Arch Linux, use:
+
+       sudo pacman -S base-devel gtk3
+
+   On Fedora, use:
+
+       sudo dnf install gcc make gtk3-devel
+
+   For other Linux distributions, install the corresponding development and utility packages using your system’s package manager.
+
+2. Download the Program:
+   Download the source code of ScreenForge from the official repository or the provided location.
+   If the source code is in a compressed format, extract it using:
+
+       tar -xvf ScreenForge.tar.gz  (or use unzip for .zip archives)
+
+3. Compile the Program:
+   Open a terminal in the directory containing the ScreenForge.c file. Run the following command:
+
+       gcc ScreenForge.c -o ScreenForge `pkg-config --cflags --libs gtk+-3.0` -lm
+
+   This will generate an executable binary file named ScreenForge.
+
+4. Run the Program:
+   After compiling the program, you can run it by specifying the correct path to the binary file.
+   If placed in /usr/local/bin, you can run it with:
+
+       ScreenForge
+
+   If the binary is located elsewhere, specify the full or relative path, for example:
+
+       /path/to/ScreenForge
+
+   To run the program from anywhere without specifying the full path, add its directory to the system's $PATH variable.
+
+5. Uninstall the Program:
+   To uninstall ScreenForge, remove the binary file from its installation directory.
+   If installed in /usr/local/bin, run:
+
+       sudo rm /usr/local/bin/ScreenForge
+
+   If installed elsewhere, adjust the path accordingly.
+
+6. Troubleshooting:
+   If you encounter issues during installation or execution, ensure that all dependencies are installed.
+   Also, verify that the correct paths to libraries and executables are specified.
+   Checking system logs or running the program in a terminal may provide useful error messages.
+
+7. License Information:
+   ScreenForge is licensed under the GNU General Public License (GPL) Version 3.0.
+   Please refer to the included LICENSE file for the full terms and conditions.
+
+For Inquiries, Please Contact:
+Email: maximkursua@gmail.com
